@@ -32,6 +32,6 @@ export const Button = styled.button`
   transition: background-color 250ms linear;
   &:hover,
   &:focus {
-    background-color: #e2e2e2;
+    background-color: #5cb85c;
   }
 `;

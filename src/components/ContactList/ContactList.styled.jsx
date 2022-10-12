@@ -2,14 +2,16 @@ import styled from 'styled-components';
 
 export const List = styled.ul`
   margin-left: 8px;
+  max-width: 300px;
 `;
 
 export const Item = styled.li`
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 8px;
 `;
 
 export const Button = styled.button`
-  /* display: inline-flex; */
   margin-bottom: 8px;
   margin-left: 8px;
 
@@ -23,6 +25,6 @@ export const Button = styled.button`
   transition: background-color 250ms linear;
   &:hover,
   &:focus {
-    background-color: #e2e2e2;
+    background-color: tomato;
   }
 `;
