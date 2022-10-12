@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { Form, Label, Input, Button } from './ContactForm.styled';
+import PropTypes from 'prop-types';
 // import { Formik } from 'formik';
 // import * as yup from 'yup';
 
@@ -65,5 +66,9 @@ class ContactForm extends Component {
     );
   }
 }
+
+ContactForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
 
 export default ContactForm;
