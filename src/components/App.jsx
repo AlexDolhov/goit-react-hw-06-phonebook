@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { Container } from './App.styled';
+import { Container, SectionContainer } from './App.styled';
 import { nanoid } from 'nanoid';
 import ContactForm from 'components/ContactForm';
 import Filter from './Filter';
@@ -56,16 +56,19 @@ export class App extends Component {
 
     return (
       <Container>
-        <h1>Phonebook</h1>
-        <ContactForm onSubmit={this.addContact} />
+        <SectionContainer>
+          <h1>Phonebook</h1>
+          <ContactForm onSubmit={this.addContact} />
+        </SectionContainer>
+        <SectionContainer>
+          <h2>Contacts</h2>
+          <Filter value={filter} onChange={this.changeFilter} />
 
-        <Filter value={filter} onChange={this.changeFilter} />
-
-        <h2>Contacts</h2>
-        <ContactList
-          contacts={visibleContacts}
-          onDeleteContact={this.deleteContact}
-        />
+          <ContactList
+            contacts={visibleContacts}
+            onDeleteContact={this.deleteContact}
+          />
+        </SectionContainer>
       </Container>
     );
   }
