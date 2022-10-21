@@ -8,6 +8,7 @@ export const List = styled.ul`
 export const Item = styled.li`
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   margin-bottom: 8px;
 `;
 
