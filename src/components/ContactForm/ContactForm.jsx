@@ -1,5 +1,5 @@
 // import { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { Label, Input, Button, ErrorText } from './ContactForm.styled';
 import { Formik, Form } from 'formik';
 import * as yup from 'yup';
@@ -57,6 +57,10 @@ export const ContactForm = ({ onSubmit }) => {
       </Form>
     </Formik>
   );
+};
+
+ContactForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
 };
 
 // // // // Controlled Form // // // // //
