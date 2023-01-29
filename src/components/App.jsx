@@ -1,9 +1,7 @@
 import { Container, SectionContainer } from './App.styled';
-// import { nanoid } from 'nanoid';
 import ContactForm from 'components/ContactForm';
 import Filter from './Filter';
 import ContactList from './ContactList';
-// import { useState, useEffect } from 'react';
 
 export const App = () => {
   // const [contacts, setContacts] = useState(() => {
@@ -24,34 +22,6 @@ export const App = () => {
   // useEffect(() => {
   //   localStorage.setItem('contacts', JSON.stringify(contacts));
   // }, [contacts]);
-
-  // const addContact = ({ name, number }) => {
-  //   const contact = {
-  //     id: nanoid(),
-  //     name,
-  //     number,
-  //   };
-
-  //   const normalisedName = name.toLowerCase();
-
-  //   contacts.find(contact => contact.name.toLowerCase() === normalisedName)
-  //     ? alert(`${name} is already in contacts`)
-  //     : setContacts([contact, ...contacts]);
-  // };
-
-  // const deleteContact = contactId => {
-  //   setContacts(contacts.filter(contact => contact.id !== contactId));
-  // };
-
-  // // const changeFilter = e => setFilter(e.currentTarget.value);
-
-  // const getVisibleContacts = () => {
-  //   const normalizedFilter = filter.toLowerCase();
-
-  //   return contacts.filter(contact =>
-  //     contact.name.toLowerCase().includes(normalizedFilter)
-  //   );
-  // };
 
   return (
     <Container>
