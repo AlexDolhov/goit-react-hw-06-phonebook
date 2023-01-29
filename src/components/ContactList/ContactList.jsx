@@ -6,11 +6,16 @@ import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/actions';
 
 // const ContactList = ({ contacts, onDeleteContact }) => (
-const ContactList = ({ onDeleteContact }) => {
-  const contacts = useSelector(getContacts);
+const ContactList = () => {
+  const contactsInStore = useSelector(getContacts);
   const filter = useSelector(getFilter);
   const dispatch = useDispatch();
-  // const visibleContacts =
+
+  const normalizedFilter = filter.toLowerCase();
+
+  const contacts = contactsInStore.filter(contact =>
+    contact.name.toLowerCase().includes(normalizedFilter)
+  );
 
   return (
     <List>
