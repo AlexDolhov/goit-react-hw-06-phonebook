@@ -7,9 +7,10 @@ import { deleteContact } from 'redux/contactsSlice';
 
 // const ContactList = ({ contacts, onDeleteContact }) => (
 const ContactList = () => {
-  const contactsInStore = useSelector(getContacts);
-  const filter = useSelector(getFilter);
   const dispatch = useDispatch();
+  const contactsInStore = useSelector(getContacts);
+  console.log(contactsInStore);
+  const filter = useSelector(getFilter);
 
   const normalizedFilter = filter.toLowerCase();
 
